@@ -20,3 +20,6 @@ The main paradigm of this tool is that images are organized in directories, refl
 ## One command line program multiple functions
 Multiple commands are bundled within one command line program (a python file)
 To make effective use of the program without pointing to the location of the `.py` file, it is possible to create a shell alias.
+
+## Photometric Stereo
+The retrieval of normal maps works through photometric stereo, for which there are multiple implementations varying in their ability to process images of reflective surfaces. The python implementation of [RobustPhotometricStereo](https://github.com/yasumat/RobustPhotometricStereo/issues) is forms the basis of the `normalmapper` command. The files `psutil.py`, `rps.py` and `rpsnumerics.py` were directly retrieved from the respective repository.
