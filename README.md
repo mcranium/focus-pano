@@ -18,7 +18,7 @@ The main paradigm of this tool is that images are organized in directories, refl
 3. all images forming a Multi Light Image Collection (MLIC) are in one directory
 
 ## One command line program multiple functions
-Multiple commands are bundled within one command line program (a python file)
+Multiple commands are bundled within one command line program – the python file [focus-pano.py](focus-pano.py).
 To make effective use of the program without pointing to the location of the `.py` file, it is possible to create a shell alias.
 
 ## Photometric Stereo
