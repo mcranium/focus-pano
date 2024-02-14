@@ -387,7 +387,7 @@ def normalmapper(solver, lp_file, dir_prefix, img_prefix, verbose):
 @click.option("-f", "--focal-length", type=click.INT, help="Focal length of the camera optics in mm. Do not use equivalent focal lengths")
 
 
-def stitch(focal_length, sensor_width, crop_factor, img_prefix, verbose):
+def stitch(focal_length, sensor_width, crop_factor, img_prefix, rotation, z_translation, verbose):
     """
     Stitch a panoramic image from multiple images located in the working directory
     Only such transformations are allowed that correspond to mainly translation movements between the image/stack captures
