@@ -261,11 +261,11 @@ def focusmerge(method, img_prefix, dir_prefix, mlic, verbose):
             
             print(image_file_list_wo_dirs)
 
-            subprocess.run(f"cd {stack_dir} && focus-stack --align-only {image_file_list_wo_dirs}", shell=True)
+            subprocess.run(f"cd {stack_dir} && focus-stack --align-only --no-whitebalance {image_file_list_wo_dirs}", shell=True)
             subprocess.run(f"cd {stack_dir} && enfuse aligned_* --hard-mask --contrast-weight 1 --exposure-weight 0 --saturation-weight 0 --contrast-window 7 --contrast-edge-scale=0.3 --contrast-min-curvature=-0.5% -o merged_{stack_dir[:-1]}_enfuse.tif", shell=True)
             
             subprocess.run(f"cd {stack_dir} && mv *_enfuse.tif .. && rm aligned*", shell=True)
-            exit()
+
 
 
 ### Photometric Stereo
